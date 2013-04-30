@@ -1,9 +1,11 @@
 ---
 layout: default
-title: HTML5 Ajax Canvas缩放图片后后变成文件的方法
+title: HTML5 Ajax Canvas缩放图片后后变成文件并上传的方法
 ---
 #{{ page.title }}
-最近做的应用里面有上传图片的功能，由于图片直接丢进七牛云存储，所以不想通过服务器端程序来写缩放功能，查了一下找到一篇文章，[点我](http://hacks.mozilla.org/2011/01/how-to-develop-a-html5-image-uploader/) ，这篇总体步骤来说是OK的，但是里面有无数个坑。
+最近做的应用里面有上传图片的功能，由于图片直接丢进七牛云存储，所以不想通过服务器端程序来写缩放功能，查了一下找到一篇文章，[点我](http://hacks.mozilla.org/2011/01/how-to-develop-a-html5-image-uploader/) ，这篇总体步骤来说是OK的，但是里面有好多坑。
+
+本来准备把上传的独立一篇写出来的，后来发现太短，加到后面吧。
 
 PS：想直接看完整可以用版代码的请直接拖到最下。
 
@@ -102,6 +104,38 @@ var blob = new Blob([ab], { type: mimeString })
 
 现在圆满了，就剩一个小问题，Chrome下会提示把ArrayBuffer传入Blob构造函数的行为deprecated了。
 
+接下来就是文件上传了，用到了jQuery。
+
+{% highlight javascript %}
+var formData = new FormData()
+formData.append("file", imgFile)
+$.ajax('http://example.com/upload',{
+    type: 'POST',
+    contentType: 'multipart/form-data;',
+    xhr: function() {  // 自定义xhr
+        myXhr = $.ajaxSettings.xhr();
+        var eventSource = myXhr.upload || myXhr;
+        eventSource.addEventListener('progress',progressHandler); // 处理上传进度，大文件的时候很有必要
+        return myXhr;
+    },
+    //Ajax events
+    success: successHandler,
+    error: function(jqXHR, textStatus, errorThrown){
+        console.log(errorThrown)
+    },
+    data: formData,
+    cache: false,
+    contentType: false,
+    processData: false
+})
+function progressHandler(event){
+    var percent = Math.round( progressEvent.loaded * 100 / progressEvent.total);
+    //你的进度条处理方法
+}
+{% endhighlight %}
+
+这个没啥坑，有个小问题，按之前的办法生成的Blob拿过来上传的时候在Firefox里面无法显示Progress，应该是Firefox只有上传文件才有prgress事件。
+
 以下是完整可用代码：
 
 {% highlight javascript %}
@@ -136,9 +170,34 @@ function dataURItoBlob(dataURI) {
     var blob = new Blob([ab], { type: mimeString })
     return blob
 }
+
+function fileUpload(){
+    var formData = new FormData()
+    formData.append("file", imgFile)
+    $.ajax('http://example.com/upload',{
+        type: 'POST',
+        contentType: 'multipart/form-data;',
+        xhr: function() {  // 自定义xhr
+            myXhr = $.ajaxSettings.xhr();
+            var eventSource = myXhr.upload || myXhr;
+            eventSource.addEventListener('progress',progressHandler); // 处理上传进度，大文件的时候很有必要
+            return myXhr;
+        },
+        //Ajax events
+        success: successHandler,
+        error: function(jqXHR, textStatus, errorThrown){
+            console.log(errorThrown)
+        },
+        data: formData,
+        cache: false,
+        contentType: false,
+        processData: false
+    })
+}
+function progressHandler(event){
+    var percent = Math.round( progressEvent.loaded * 100 / progressEvent.total);
+    //你的进度条处理方法
+}
 {% endhighlight %}
-
-imgFile就可以拿来放进FormData里面作为参数Ajax提交了。下一篇就写怎么提交吧，这个比较简单，不过也有点破事儿。
-
 
 <p>{{ page.date | date_to_string }}</p>
