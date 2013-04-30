@@ -16,7 +16,6 @@ var MAX_WIDTH = 800;
 var MAX_HEIGHT = 600;
 var width = img.width;
 var height = img.height;
- 
 if (width > height) {
   if (width > MAX_WIDTH) {
     height *= MAX_WIDTH / width;
@@ -43,7 +42,6 @@ img.onload = function(){
 	var MAX_HEIGHT = 600;
 	var width = img.width;
 	var height = img.height;
- 
 	if (width > height) {
   		if (width > MAX_WIDTH) {
     		height *= MAX_WIDTH / width;
