@@ -80,6 +80,7 @@ var file = canvas.mozGetAsFile("foo.png");
 </pre>
 
 然而实际上mozGetAsFile只有Firefox支持，所以为了兼容Chrome跟Safari我去查了一下dataurl怎么用。这个原文就找不到了，也被坑了一次，搜索到的前几条好多BlobBuilder的，这玩意不知道什么时候就deprecated了，最新版的Chrome跟Safari都没这类，最终找到了一个ArrayBuffer直接转换blob的代码：
+
 <pre>
 function dataURItoBlob(dataURI) {
     var byteString = atob(dataURI.split(',')[1]);
@@ -94,6 +95,7 @@ function dataURItoBlob(dataURI) {
     return blob
 }
 </pre>
+
 这段代码在Chrome里面用的毫无问题，但是Safari生成的blob只有十几字节，这明显不科学。[MDN Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob?redirectlocale=en-US&redirectslug=DOM%2FBlob) 上查到可以直接把ArrayBuffer传到Blob构造函数里面，于是就变成了
 
 <pre>
@@ -103,6 +105,7 @@ var blob = new Blob([ab], { type: mimeString })
 现在圆满了，就剩一个小问题，Chrome下会提示把ArrayBuffer传入Blob构造函数的行为deprecated了。
 
 以下是完整可用代码：
+
 <pre>
 fileinput.onchange = getImgFile //file input的change事件绑定
 var imgFile 
