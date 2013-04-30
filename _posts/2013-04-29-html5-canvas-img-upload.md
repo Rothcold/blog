@@ -9,7 +9,6 @@ PS：想直接看完整可以用版代码的请直接拖到最下。
 
 首先创建Img并画到Canvas上这一步，他的代码连起来是这样的：
 
-
 <pre>
 var img = document.createElement("img");
 img.src = window.URL.createObjectURL(file);
@@ -34,6 +33,7 @@ canvas.height = height;
 var ctx = canvas.getContext("2d");
 ctx.drawImage(img, 0, 0, width, height);
 </pre>
+
 但是这样写Canvas里面什么都不会出现，我昨天跟这段代码战斗了小半天，才发现他应该改成：
 
 <pre>
