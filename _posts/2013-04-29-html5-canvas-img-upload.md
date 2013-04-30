@@ -92,7 +92,7 @@ function dataURItoBlob(dataURI) {
     var blob = new Blob([dataView], { type: mimeString })
     return blob
 }
-{%javascript%}
+{% endhighlight %}
 
 这段代码在Chrome里面用的毫无问题，但是Safari生成的blob只有十几字节，这明显不科学。[MDN Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob?redirectlocale=en-US&redirectslug=DOM%2FBlob) 上查到可以直接把ArrayBuffer传到Blob构造函数里面，于是就变成了
 
