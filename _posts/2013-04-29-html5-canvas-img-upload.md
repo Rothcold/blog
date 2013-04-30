@@ -36,7 +36,7 @@ ctx.drawImage(img, 0, 0, width, height);
 
 但是这样写Canvas里面什么都不会出现，我昨天跟这段代码战斗了小半天，才发现他应该改成：
 
-<pre>
+{% highlight javascript %}
 var img = document.createElement("img");
 img.onload = function(){
 	var MAX_WIDTH = 800;
@@ -61,27 +61,27 @@ img.onload = function(){
 	ctx.drawImage(img, 0, 0, width, height);
 }
 img.src = window.URL.createObjectURL(file);
-</pre>
+{% endhighlight %}
 
 这是因为Javascript是异步调用的，正序执行的时候img还没画出来，ctx.drawImage已经调用了，导致什么效果都没有。
 
 上面那段代码的最后一句也是个坑，在Chrome，Safari下都报错，其实应该写成：
 
-<pre>
+{% highlight javascript %}
 var myURL = window.URL || window.webkitURL
 img.src = myURL.createObjectURL(file);
-</pre>
+{% endhighlight %}
 
 然后要将Canvas转换成文件来上传，这篇写了这两个方法：
 
-<pre>
+{% highlight javascript %}
 var dataurl = canvas.toDataURL("image/png");
 var file = canvas.mozGetAsFile("foo.png");
-</pre>
+{% endhighlight %}
 
 然而实际上mozGetAsFile只有Firefox支持，所以为了兼容Chrome跟Safari我去查了一下dataurl怎么用。这个原文就找不到了，也被坑了一次，搜索到的前几条好多BlobBuilder的，这玩意不知道什么时候就deprecated了，最新版的Chrome跟Safari都没这类，最终找到了一个ArrayBuffer直接转换blob的代码：
 
-<pre>
+{% highlight javascript %}
 function dataURItoBlob(dataURI) {
     var byteString = atob(dataURI.split(',')[1]);
     var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
@@ -94,19 +94,19 @@ function dataURItoBlob(dataURI) {
     var blob = new Blob([dataView], { type: mimeString })
     return blob
 }
-</pre>
+{%javascript%}
 
 这段代码在Chrome里面用的毫无问题，但是Safari生成的blob只有十几字节，这明显不科学。[MDN Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob?redirectlocale=en-US&redirectslug=DOM%2FBlob) 上查到可以直接把ArrayBuffer传到Blob构造函数里面，于是就变成了
 
-<pre>
+{% highlight javascript %}
 var blob = new Blob([ab], { type: mimeString })
-</pre>
+{% endhighlight %}
 
 现在圆满了，就剩一个小问题，Chrome下会提示把ArrayBuffer传入Blob构造函数的行为deprecated了。
 
 以下是完整可用代码：
 
-<pre>
+{% highlight javascript %}
 fileinput.onchange = getImgFile //file input的change事件绑定
 var imgFile 
 function getImgFile(event){
@@ -138,7 +138,7 @@ function dataURItoBlob(dataURI) {
     var blob = new Blob([ab], { type: mimeString })
     return blob
 }
-</pre>
+{% endhighlight %}
 
 imgFile就可以拿来放进FormData里面作为参数Ajax提交了。下一篇就写怎么提交吧，这个比较简单，不过也有点破事儿。
 
