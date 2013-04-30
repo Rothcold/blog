@@ -83,15 +83,12 @@ var file = canvas.mozGetAsFile("foo.png");
 <pre>
 function dataURItoBlob(dataURI) {
     var byteString = atob(dataURI.split(',')[1]);
-
     var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
-
     var ab = new ArrayBuffer(byteString.length);
     var ia = new Uint8Array(ab);
     for (var i = 0; i < byteString.length; i++) {
         ia[i] = byteString.charCodeAt(i);
     }
-    
     var dataView = new DataView(ab)
     var blob = new Blob([dataView], { type: mimeString })
     return blob
@@ -119,7 +116,6 @@ function getImgFile(event){
             imgFile = canvas.mozGetAsFile("img.png")
         }else{
             var dataURL = canvas.toDataURL("image/png")
-
             var filenameParts = coverfile.name.split(".")
             var extension = filenameParts[filenameParts.length-1]
             imgFile = dataURItoBlob(dataURL)
@@ -128,12 +124,9 @@ function getImgFile(event){
     var myURL = window.URL || window.webkitURL
     img.src = myURL.createObjectURL(event.target.file[0])
 }
-
 function dataURItoBlob(dataURI) {
     var byteString = atob(dataURI.split(',')[1]);
-
     var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
-
     var ab = new ArrayBuffer(byteString.length);
     var ia = new Uint8Array(ab);
     for (var i = 0; i < byteString.length; i++) {
