@@ -17,15 +17,15 @@ var MAX_HEIGHT = 600;
 var width = img.width;
 var height = img.height;
 if (width > height) {
-  if (width > MAX_WIDTH) {
-    height *= MAX_WIDTH / width;
-    width = MAX_WIDTH;
-  }
+    if (width > MAX_WIDTH) {
+        height *= MAX_WIDTH / width;
+        width = MAX_WIDTH;
+    }
 } else {
-  if (height > MAX_HEIGHT) {
-    width *= MAX_HEIGHT / height;
-    height = MAX_HEIGHT;
-  }
+    if (height > MAX_HEIGHT) {
+        width *= MAX_HEIGHT / height;
+        height = MAX_HEIGHT;
+    }
 }
 canvas.width = width;
 canvas.height = height;
@@ -106,7 +106,7 @@ var blob = new Blob([ab], { type: mimeString })
 
 {% highlight javascript %}
 fileinput.onchange = getImgFile //file input的change事件绑定
-var imgFile 
+var imgFile
 function getImgFile(event){
     var img = document.createElement("img")
     img.onload = function(){
