@@ -1,6 +1,7 @@
 ---
 layout: default
 title: HTML5 Ajax Canvas缩放图片后后变成文件并上传的方法
+description:HTML5 Canvas缩放图片后上传的方法，处理各种坑。
 ---
 #{{ page.title }}
 最近做的应用里面有上传图片的功能，由于图片直接丢进七牛云存储，所以不想通过服务器端程序来写缩放功能，查了一下找到一篇文章，[点我](http://hacks.mozilla.org/2011/01/how-to-develop-a-html5-image-uploader/) ，这篇总体步骤来说是OK的，但是里面有好多坑。
