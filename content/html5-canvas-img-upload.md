@@ -1,5 +1,5 @@
 Title: HTML5 Ajax Canvas缩放图片后后变成文件并上传的方法
-Date: 2014-03-24 21:17
+Date: 2013-03-24 21:17
 Tag: javascript, html5, file upload
 Summary: HTML5 Canvas缩放图片后上传的方法，处理各种坑。
 Category: 编程
