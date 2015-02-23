@@ -1,247 +1,229 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="en">
 <head>
-        <meta charset="utf-8" />
-        <title>Rothcold</title>
-        <link rel="stylesheet" href="http://rothcold.github.io/blog/theme/css/main.css" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Rothcold" />
+        <meta name="description" content="">
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+    <title>Welcome - Rothcold</title>
+
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    
+    <link href="/theme/css/pelican-twitchy.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Feeds -->
 </head>
+<body data-spy="scroll" data-target="#scrollspy">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper-small">
+            <ul id="accordion-small" class="sidebar-nav sidebar-nav-small">
+                <li>
+        <a href="" title="Rothcold" class="collapsed">
+            <span class="glyphicon glyphicon-home"></span>
+        </a>
+    </li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="/archives.html" title="Recent Articles" class="collapsed">
+            <span class="glyphicon glyphicon-th-list"></span>
+        </a>
+    </li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion-small" href="#collapse-social-small" title="Social" class="collapsed">
+                        <i class="fa fa-users padding-small"></i>
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social-small" class="collapse ">
+                    <li>
+                        <a href="http://twitter.com/rothcold" title="Twitter"><i class="fa fa-twitter-square fa-lg padding-small"></i></a>
+                    </li>
+                    <li>
+                        <a href="http://weibo.com/rothcold" title="新浪微博"><i class="fa fa-新浪微博-square fa-lg padding-small"></i></a>
+                    </li>
+                </ul></li>
+                <li class="nav-divider"></li>
+                <li>
+        <a href="#" title="Back to top" class="collapsed">
+            <span class="fa fa-arrow-up"></span>
+        </a>
+    </li>
+            </ul>
+        </div>
+        <div id="sidebar-wrapper">
+            <ul id="accordion" class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="/">
+                            <span class="glyphicon glyphicon-home padding-small"></span>
+                            Rothcold
+                    </a>
+                </li>
+                    <li>
+                        <a href="/archives.html">
+                            <span class="glyphicon glyphicon-th-list padding-small"></span>
+                            Recent Articles
+                        </a>
+                    </li>
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-social">
+                        <i class="fa fa-users padding-small"></i>
+                        Contact
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-social" class="sidebar_submenu collapse ">
+                    <li>
+                        <a href="http://twitter.com/rothcold" title="Twitter">
+                            <i class="fa fa-twitter-square fa-lg padding-small"></i>
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://weibo.com/rothcold" title="新浪微博">
+                            <i class="fa fa-新浪微博-square fa-lg padding-small"></i>
+                            新浪微博
+                        </a>
+                    </li>
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-pages">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Pages
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-pages" class="sidebar_submenu collapse ">
+                </ul></li>
+                
+                <li class="nav-divider"></li>
+                <li>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-categories">
+                        <i class="fa fa-folder-open padding-small"></i>
+                        Categories
+                    </a>
+                </li>
+                <li class="panel anti-panel"><ul id="collapse-categories" class="sidebar_submenu collapse ">
+                    <li >
+                        <a href="/category/bian-cheng.html">
+                            <i class="fa fa-folder-open padding-small"></i>
+                            编程
+                            <span class="badge pull-right categorybadge">1</span>
+                        </a>
+                    </li>
+                </ul></li>
+                
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- open/close sidebar -->
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">
+            <span id="right-arrow" class="glyphicon glyphicon-chevron-right"  title="expand sidebar"></span>
+            <span id="left-arrow" class="glyphicon glyphicon-chevron-left" title="minimize sidebar"></span>
+        </a>
+       <!-- /open/close sidebar -->
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="http://rothcold.github.io/blog/">Rothcold </a></h1>
-                <nav><ul>
-                    <li><a href="http://rothcold.github.io/blog/category/bian-cheng.html">编程</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+<section id="content" class="body">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="jumbotron">  
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Welcome - Rothcold</h1>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Latest Articles:</h2>
+        </div>
+    </div>
+</section>
+<div class="row">
+    <div class="col-lg-12">
+            <article>
+                <h2>
+                    <a href="/html5-ajax-canvassuo-fang-tu-pian-hou-hou-bian-cheng-wen-jian-bing-shang-chuan-de-fang-fa.html">HTML5 Ajax Canvas缩放图片后后变成文件并上传的方法</a>
+<div class="post-info">
+    <div class="publish-info-block">
+        <small>
+            <span class="published">
+                <i class="fa fa-calendar padding-small"></i><time datetime="2013-03-24T21:17:00+08:00"> Sun 24 March 2013</time>
+            </span>
+            <span class="category">
+                <i class="fa fa-folder-open padding-small"></i><a href="/category/bian-cheng.html">编程</a>
+            </span>
+        </small>
+    </div>
+</div><!-- /.post-info -->                </h2>
+                <div class="summary">
+                    <p>HTML5 Canvas缩放图片后上传的方法，处理各种坑。</p>
+                </div>
+            </article>
+    </div>
+</div>
+            </div>
+<footer>
+    <div class="container-fluid">
+        <hr>
+        <div class="row">
+            <div class="col-xs-4 text-left">
+                
+            </div>
+            <div class="col-xs-8 text-right">
+                <p>Built using <a href="http://docs.getpelican.com/en/latest">Pelican</a>, <a href="http://getbootstrap.com">Bootstrap3</a> and the <a href="https://github.com/ingwinlu/pelican-twitchy">pelican-twitchy</a> theme.</p>
+                <p>&copy; 2013 Rothcold</p>
+            </div>
+        </div>
+    </div>
+</footer>        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/theme/js/jquery-1.11.0.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/theme/js/bootstrap.min.js"></script>
+    <!-- twitchy Script -->
+    <script src="/theme/js/pelican_twitchy.js"></script>
+<script>
+    function FadeInOnScroll(ObjectList){
+        ObjectList.each(function(i) {
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="http://rothcold.github.io/blog/html5-ajax-canvassuo-fang-tu-pian-hou-hou-bian-cheng-wen-jian-bing-shang-chuan-de-fang-fa.html">HTML5 Ajax Canvas缩放图片后后变成文件并上传的方法</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2014-03-24T21:17:00+08:00">
-                Published: Mon 24 March 2014
-        </abbr>
+            if( bottom_of_window > bottom_of_object ){
+                $(this).fadeTo(750,1);
+            }
+        });
+    }
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="http://rothcold.github.io/blog/author/rothcold.html">Rothcold</a>
-        </address>
-<p>In <a href="http://rothcold.github.io/blog/category/bian-cheng.html">编程</a>. </p>
+    articles = $("article").fadeTo(0, 0.05);
+    FadeInOnScroll(articles)
 
-</footer><!-- /.post-info --><p>最近做的应用里面有上传图片的功能，由于图片直接丢进七牛云存储，所以不想通过服务器端程序来写缩放功能，查了一下找到一篇文章，<a href="http://hacks.mozilla.org/2011/01/how-to-develop-a-html5-image-uploader/">点我</a> ，这篇总体步骤来说是OK的，但是里面有好多坑。</p>
-<p>本来准备把上传的独立一篇写出来的，后来发现太短，加到后面吧。</p>
-<p>PS：想直接看完整可以用版代码的请直接拖到最下。</p>
-<p>首先创建Img并画到Canvas上这一步，他的代码连起来是这样的：</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">img</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;img&quot;</span><span class="p">);</span>
-<span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">MAX_WIDTH</span> <span class="o">=</span> <span class="mi">800</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">MAX_HEIGHT</span> <span class="o">=</span> <span class="mi">600</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">width</span> <span class="o">=</span> <span class="nx">img</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">height</span> <span class="o">=</span> <span class="nx">img</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">width</span> <span class="o">&gt;</span> <span class="nx">height</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">width</span> <span class="o">&gt;</span> <span class="nx">MAX_WIDTH</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">height</span> <span class="o">*=</span> <span class="nx">MAX_WIDTH</span> <span class="o">/</span> <span class="nx">width</span><span class="p">;</span>
-        <span class="nx">width</span> <span class="o">=</span> <span class="nx">MAX_WIDTH</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">height</span> <span class="o">&gt;</span> <span class="nx">MAX_HEIGHT</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">width</span> <span class="o">*=</span> <span class="nx">MAX_HEIGHT</span> <span class="o">/</span> <span class="nx">height</span><span class="p">;</span>
-        <span class="nx">height</span> <span class="o">=</span> <span class="nx">MAX_HEIGHT</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">width</span><span class="p">;</span>
-<span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">height</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">&quot;2d&quot;</span><span class="p">);</span>
-<span class="nx">ctx</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="nx">img</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span>
-</pre></div>
-
-
-<p>但是这样写Canvas里面什么都不会出现，我昨天跟这段代码战斗了小半天，才发现他应该改成：</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">img</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;img&quot;</span><span class="p">);</span>
-<span class="nx">img</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-    <span class="kd">var</span> <span class="nx">MAX_WIDTH</span> <span class="o">=</span> <span class="mi">800</span><span class="p">;</span>
-    <span class="kd">var</span> <span class="nx">MAX_HEIGHT</span> <span class="o">=</span> <span class="mi">600</span><span class="p">;</span>
-    <span class="kd">var</span> <span class="nx">width</span> <span class="o">=</span> <span class="nx">img</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
-    <span class="kd">var</span> <span class="nx">height</span> <span class="o">=</span> <span class="nx">img</span><span class="p">.</span><span class="nx">height</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">width</span> <span class="o">&gt;</span> <span class="nx">height</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">width</span> <span class="o">&gt;</span> <span class="nx">MAX_WIDTH</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">height</span> <span class="o">*=</span> <span class="nx">MAX_WIDTH</span> <span class="o">/</span> <span class="nx">width</span><span class="p">;</span>
-            <span class="nx">width</span> <span class="o">=</span> <span class="nx">MAX_WIDTH</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">height</span> <span class="o">&gt;</span> <span class="nx">MAX_HEIGHT</span><span class="p">)</span> <span class="p">{</span>
-            <span class="nx">width</span> <span class="o">*=</span> <span class="nx">MAX_HEIGHT</span> <span class="o">/</span> <span class="nx">height</span><span class="p">;</span>
-            <span class="nx">height</span> <span class="o">=</span> <span class="nx">MAX_HEIGHT</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">width</span><span class="p">;</span>
-    <span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">height</span><span class="p">;</span>
-    <span class="kd">var</span> <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">&quot;2d&quot;</span><span class="p">);</span>
-    <span class="nx">ctx</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="nx">img</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">width</span><span class="p">,</span> <span class="nx">height</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
-</pre></div>
-
-
-<p>这是因为Javascript是异步调用的，正序执行的时候img还没画出来，ctx.drawImage已经调用了，导致什么效果都没有。</p>
-<p>上面那段代码的最后一句也是个坑，在Chrome，Safari下都报错，其实应该写成：</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">myURL</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">URL</span> <span class="o">||</span> <span class="nb">window</span><span class="p">.</span><span class="nx">webkitURL</span>
-<span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">myURL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span>
-</pre></div>
-
-
-<p>然后要将Canvas转换成文件来上传，这篇写了这两个方法：</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">dataurl</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">toDataURL</span><span class="p">(</span><span class="s2">&quot;image/png&quot;</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">file</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">mozGetAsFile</span><span class="p">(</span><span class="s2">&quot;foo.png&quot;</span><span class="p">);</span>
-</pre></div>
-
-
-<p>然而实际上mozGetAsFile只有Firefox支持，所以为了兼容Chrome跟Safari我去查了一下dataurl怎么用。这个原文就找不到了，也被坑了一次，搜索到的前几条好多BlobBuilder的，这玩意不知道什么时候就deprecated了，最新版的Chrome跟Safari都没这类，最终找到了一个ArrayBuffer直接转换blob的代码：</p>
-<div class="highlight"><pre><span class="kd">function</span> <span class="nx">dataURItoBlob</span><span class="p">(</span><span class="nx">dataURI</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">byteString</span> <span class="o">=</span> <span class="nx">atob</span><span class="p">(</span><span class="nx">dataURI</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]);</span>
-    <span class="kd">var</span> <span class="nx">mimeString</span> <span class="o">=</span> <span class="nx">dataURI</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="kd">var</span> <span class="nx">ab</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ArrayBuffer</span><span class="p">(</span><span class="nx">byteString</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
-    <span class="kd">var</span> <span class="nx">ia</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Uint8Array</span><span class="p">(</span><span class="nx">ab</span><span class="p">);</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">byteString</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">ia</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">byteString</span><span class="p">.</span><span class="nx">charCodeAt</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="kd">var</span> <span class="nx">dataView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DataView</span><span class="p">(</span><span class="nx">ab</span><span class="p">)</span>
-    <span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="nx">dataView</span><span class="p">],</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="nx">mimeString</span> <span class="p">})</span>
-    <span class="k">return</span> <span class="nx">blob</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p>这段代码在Chrome里面用的毫无问题，但是Safari生成的blob只有十几字节，这明显不科学。<a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob?redirectlocale=en-US&amp;redirectslug=DOM%2FBlob">MDN Blob</a> 上查到可以直接把ArrayBuffer传到Blob构造函数里面，于是就变成了</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="nx">ab</span><span class="p">],</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="nx">mimeString</span> <span class="p">})</span>
-</pre></div>
-
-
-<p>现在圆满了，就剩一个小问题，Chrome下会提示把ArrayBuffer传入Blob构造函数的行为deprecated了。</p>
-<p>接下来就是文件上传了，用到了jQuery。</p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">formData</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FormData</span><span class="p">()</span>
-<span class="nx">formData</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;file&quot;</span><span class="p">,</span> <span class="nx">imgFile</span><span class="p">)</span>
-<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="s1">&#39;http://example.com/upload&#39;</span><span class="p">,{</span>
-    <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
-    <span class="nx">contentType</span><span class="o">:</span> <span class="s1">&#39;multipart/form-data;&#39;</span><span class="p">,</span>
-    <span class="nx">xhr</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>  <span class="c1">// 自定义xhr</span>
-        <span class="nx">myXhr</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">ajaxSettings</span><span class="p">.</span><span class="nx">xhr</span><span class="p">();</span>
-        <span class="kd">var</span> <span class="nx">eventSource</span> <span class="o">=</span> <span class="nx">myXhr</span><span class="p">.</span><span class="nx">upload</span> <span class="o">||</span> <span class="nx">myXhr</span><span class="p">;</span>
-        <span class="nx">eventSource</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;progress&#39;</span><span class="p">,</span><span class="nx">progressHandler</span><span class="p">);</span> <span class="c1">// 处理上传进度，大文件的时候很有必要</span>
-        <span class="k">return</span> <span class="nx">myXhr</span><span class="p">;</span>
-    <span class="p">},</span>
-    <span class="c1">//Ajax events</span>
-    <span class="nx">success</span><span class="o">:</span> <span class="nx">successHandler</span><span class="p">,</span>
-    <span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">jqXHR</span><span class="p">,</span> <span class="nx">textStatus</span><span class="p">,</span> <span class="nx">errorThrown</span><span class="p">){</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">errorThrown</span><span class="p">)</span>
-    <span class="p">},</span>
-    <span class="nx">data</span><span class="o">:</span> <span class="nx">formData</span><span class="p">,</span>
-    <span class="nx">cache</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="nx">contentType</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="nx">processData</span><span class="o">:</span> <span class="kc">false</span>
-<span class="p">})</span>
-<span class="kd">function</span> <span class="nx">progressHandler</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
-    <span class="kd">var</span> <span class="nx">percent</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span> <span class="nx">progressEvent</span><span class="p">.</span><span class="nx">loaded</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="nx">progressEvent</span><span class="p">.</span><span class="nx">total</span><span class="p">);</span>
-    <span class="c1">//你的进度条处理方法</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p>这个没啥坑，有个小问题，按之前的办法生成的Blob拿过来上传的时候在Firefox里面无法显示Progress，应该是Firefox只有上传文件才有prgress事件。</p>
-<p>以下是完整可用代码：</p>
-<div class="highlight"><pre><span class="nx">fileinput</span><span class="p">.</span><span class="nx">onchange</span> <span class="o">=</span> <span class="nx">getImgFile</span> <span class="c1">//file input的change事件绑定</span>
-<span class="kd">var</span> <span class="nx">imgFile</span>
-<span class="kd">function</span> <span class="nx">getImgFile</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
-    <span class="kd">var</span> <span class="nx">img</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;img&quot;</span><span class="p">)</span>
-    <span class="nx">img</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-        <span class="kd">var</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;coverFileCanvas&quot;</span><span class="p">)</span>
-        <span class="kd">var</span> <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">&quot;2d&quot;</span><span class="p">)</span>
-        <span class="nx">ctx</span><span class="p">.</span><span class="nx">drawImage</span><span class="p">(</span><span class="nx">img</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">WIDTH</span><span class="p">,</span> <span class="nx">HEIGHT</span><span class="p">)</span>
-        <span class="k">if</span><span class="p">(</span><span class="nx">canvas</span><span class="p">.</span><span class="nx">mozGetAsFile</span><span class="p">){</span>
-            <span class="nx">imgFile</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">mozGetAsFile</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">)</span>
-        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-            <span class="kd">var</span> <span class="nx">dataURL</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">toDataURL</span><span class="p">(</span><span class="s2">&quot;image/png&quot;</span><span class="p">)</span>
-            <span class="kd">var</span> <span class="nx">filenameParts</span> <span class="o">=</span> <span class="nx">coverfile</span><span class="p">.</span><span class="nx">name</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
-            <span class="kd">var</span> <span class="nx">extension</span> <span class="o">=</span> <span class="nx">filenameParts</span><span class="p">[</span><span class="nx">filenameParts</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-            <span class="nx">imgFile</span> <span class="o">=</span> <span class="nx">dataURItoBlob</span><span class="p">(</span><span class="nx">dataURL</span><span class="p">)</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="kd">var</span> <span class="nx">myURL</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">URL</span> <span class="o">||</span> <span class="nb">window</span><span class="p">.</span><span class="nx">webkitURL</span>
-    <span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">myURL</span><span class="p">.</span><span class="nx">createObjectURL</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">file</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="p">}</span>
-<span class="kd">function</span> <span class="nx">dataURItoBlob</span><span class="p">(</span><span class="nx">dataURI</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">byteString</span> <span class="o">=</span> <span class="nx">atob</span><span class="p">(</span><span class="nx">dataURI</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]);</span>
-    <span class="kd">var</span> <span class="nx">mimeString</span> <span class="o">=</span> <span class="nx">dataURI</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;:&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">].</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;;&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="kd">var</span> <span class="nx">ab</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ArrayBuffer</span><span class="p">(</span><span class="nx">byteString</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
-    <span class="kd">var</span> <span class="nx">ia</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Uint8Array</span><span class="p">(</span><span class="nx">ab</span><span class="p">);</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">byteString</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">ia</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">byteString</span><span class="p">.</span><span class="nx">charCodeAt</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="kd">var</span> <span class="nx">blob</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="nx">ab</span><span class="p">],</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="nx">mimeString</span> <span class="p">})</span>
-    <span class="k">return</span> <span class="nx">blob</span>
-<span class="p">}</span>
-
-<span class="kd">function</span> <span class="nx">fileUpload</span><span class="p">(){</span>
-    <span class="kd">var</span> <span class="nx">formData</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FormData</span><span class="p">()</span>
-    <span class="nx">formData</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s2">&quot;file&quot;</span><span class="p">,</span> <span class="nx">imgFile</span><span class="p">)</span>
-    <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="s1">&#39;http://example.com/upload&#39;</span><span class="p">,{</span>
-        <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;POST&#39;</span><span class="p">,</span>
-        <span class="nx">contentType</span><span class="o">:</span> <span class="s1">&#39;multipart/form-data;&#39;</span><span class="p">,</span>
-        <span class="nx">xhr</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>  <span class="c1">// 自定义xhr</span>
-            <span class="nx">myXhr</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">ajaxSettings</span><span class="p">.</span><span class="nx">xhr</span><span class="p">();</span>
-            <span class="kd">var</span> <span class="nx">eventSource</span> <span class="o">=</span> <span class="nx">myXhr</span><span class="p">.</span><span class="nx">upload</span> <span class="o">||</span> <span class="nx">myXhr</span><span class="p">;</span>
-            <span class="nx">eventSource</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;progress&#39;</span><span class="p">,</span><span class="nx">progressHandler</span><span class="p">);</span> <span class="c1">// 处理上传进度，大文件的时候很有必要</span>
-            <span class="k">return</span> <span class="nx">myXhr</span><span class="p">;</span>
-        <span class="p">},</span>
-        <span class="c1">//Ajax events</span>
-        <span class="nx">success</span><span class="o">:</span> <span class="nx">successHandler</span><span class="p">,</span>
-        <span class="nx">error</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">jqXHR</span><span class="p">,</span> <span class="nx">textStatus</span><span class="p">,</span> <span class="nx">errorThrown</span><span class="p">){</span>
-            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">errorThrown</span><span class="p">)</span>
-        <span class="p">},</span>
-        <span class="nx">data</span><span class="o">:</span> <span class="nx">formData</span><span class="p">,</span>
-        <span class="nx">cache</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nx">contentType</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nx">processData</span><span class="o">:</span> <span class="kc">false</span>
-    <span class="p">})</span>
-<span class="p">}</span>
-<span class="kd">function</span> <span class="nx">progressHandler</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
-    <span class="kd">var</span> <span class="nx">percent</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span> <span class="nx">progressEvent</span><span class="p">.</span><span class="nx">loaded</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="nx">progressEvent</span><span class="p">.</span><span class="nx">total</span><span class="p">);</span>
-    <span class="c1">//你的进度条处理方法</span>
-<span class="p">}</span>
-</pre></div>                </article>
-<p class="paginator">
-    Page 1 / 1
-</p>
-            </aside><!-- /#featured -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-
-                            <li><a href="http://weibo.com/rothcold">新浪微博</a></li>
-                            <li><a href="http://twitter.com/rothcold">Twitter</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
+    $(window).scroll(function() {
+        FadeInOnScroll(articles)
+    });
+</script>
 </body>
 </html>
